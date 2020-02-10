@@ -23,7 +23,12 @@ class ViewController: UITableViewController {
                 pictures.append(item)
         }
         
+        navigationItem.title = "View your cartoon"
     }
+    
+    
+    
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
 
@@ -40,7 +45,8 @@ class ViewController: UITableViewController {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "picture", for: indexPath)
         
         cell.textLabel?.text = pictures[indexPath.row]
-        print("here")
+        cell.imageView?.image = UIImage(named: "icon")
+//        print("here")
         return cell
         
         
